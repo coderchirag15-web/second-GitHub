@@ -404,70 +404,120 @@ nav ul li a.active {
 
 
 
-/* Portfolio Section */
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-}
-
-.portfolio-card {
-    background-color: var(--card-bg);
-    border-radius: 14px;
-    overflow: hidden;
-    border: 1px solid var(--border-color);
-}
-
-.placeholder-img {
-    height: 190px;
-    background-color: #16222f;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-muted);
-}
-
-.portfolio-info {
-    padding: 22px;
-}
-
-.portfolio-info h4 {
-    margin-bottom: 6px;
-}
-
-.portfolio-info p {
-    color: var(--text-muted);
-    font-size: 13px;
-}
-
 /* Contact Section */
-.contact-container {
-    max-width: 600px;
-    margin: 0 auto;
-}
+    .contact-container {
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+      padding: 20px;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin: 80px auto;
+      align-items: center;
+    }
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 5px;
+    }
 
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 14px 18px;
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    color: #fff;
-    outline: none;
-    font-size: 14px;
-}
+    h2 span {
+      color: #00d2c6;
+    }
 
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: var(--primary-color);
-}
+    p {
+      color: #a0aab8;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+      width: 100%;
+      background-color: #121a29;
+      border: 1px solid #1e293b;
+      border-radius: 8px;
+      padding: 12px 15px;
+      color: #ffffff;
+      font-size: 14px;
+      outline: none;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      height: 120px;
+      resize: vertical;
+    }
+
+    /* Secret Checkbox Trigger */
+    #toast-trigger {
+      display: none;
+    }
+
+    /* Send Button styled as Label */
+    .btn-send {
+      display: block;
+      background-color: #00d2c6;
+      color: #000000;
+      padding: 14px;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: center;
+      transition: background 0.3s ease;
+    }
+
+    .btn-send:hover {
+      background-color: #00b3a8;
+    }
+
+    /* --- TOAST STYLING (Bottom Left) --- */
+    .toast {
+      position: fixed;
+      left: 20px;
+      bottom: -100px; /* Initially off-screen */
+      background-color: #121a29;
+      color: #00d2c6;
+      border: 1px solid #00d2c6;
+      padding: 16px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+      font-size: 14px;
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Button par click hote hi Animation chalega */
+    #toast-trigger:checked ~ .toast {
+      animation: showToast 4s forwards;
+    }
+
+    @keyframes showToast {
+      0% {
+        bottom: -100px;
+        opacity: 0;
+      }
+      15% {
+        bottom: 30px; /* Bottom Left Position */
+        opacity: 1;
+      }
+      85% {
+        bottom: 30px;
+        opacity: 1;
+      }
+      100% {
+        bottom: -100px;
+        opacity: 0;
+      }
+    }
 
 /* Footer */
 footer {
