@@ -45,3 +45,19 @@ function typeEffect() {
 document.addEventListener("DOMContentLoaded", () => {
     setTimeout(typeEffect, 1500);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
