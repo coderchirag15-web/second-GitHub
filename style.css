@@ -435,7 +435,7 @@ nav ul li a.active {
     .form-group {
       display: flex;
       flex-direction: column;
-      gap: 100px;
+      gap: 100  px;
     }
 
     input[type="text"], input[type="email"], textarea {
@@ -485,7 +485,7 @@ nav ul li a.active {
       bottom: -100px; /* Initially off-screen */
       background-color: #121a29;
       color: #00d2c6;
-      border: 1px solid #00d2c6;
+      border: 1px solid #04a49c;
       padding: 16px;
       border-radius: 8px;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
