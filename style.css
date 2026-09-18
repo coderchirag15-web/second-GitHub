@@ -405,95 +405,131 @@ nav ul li a.active {
 
 
 /* Contact Section */
-    .contact-container {
-      width: 100%;
-      max-width: 500px;
-      text-align: center;
-      padding: 20px;
-      justify-content: center;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      margin: 80px auto;
-      align-items: center;
-    }
+#Contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 90px 8%;
+    width: 100%;
+}
 
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 5px;
-    }
+/* Contact Container Center Alignment */
+.contact-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto; /* Center horizontal alignment */
+    text-align: center;
+}
 
-    h2 span {
-      color: #00d2c6;
-    }
+/* Main Heading */
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
 
-    p {
-      color: #a0aab8;
-      margin-bottom: 30px;
-    }
+/* Heading Highlight Color */
+.title span {
+    color: #00d9c0;
+}
 
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 100  px;
-    }
+/* Subtitle */
+.subtitle {
+    font-size: 0.95rem;
+    color: #8f9ba8;
+    margin-bottom: 30px;
+}
 
-    input[type="text"], input[type="email"], textarea {
-      width: 100%;
-      background-color: #121a29;
-      border: 1px solid #1e293b;
-      border-radius: 8px;
-      padding: 12px 15px;
-      color: #ffffff;
-      font-size: 14px;
-      outline: none;
-      box-sizing: border-box;
-    }
+/* Form Layout */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
 
-    textarea {
-      height: 120px;
-      resize: vertical;
-    }
+/* Input Fields Styling */
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    background-color: #121927;
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    padding: 14px 16px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
 
-    /* Secret Checkbox Trigger */
-    #toast-trigger {
-      display: none;
-    }
+/* Placeholder Styling */
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: #5d6b7c;
+}
 
-    /* Send Button styled as Label */
-    .btn-send {
-      display: block;
-      background-color: #00d2c6;
-      color: #000000;
-      padding: 14px;
-      border-radius: 25px;
-      font-weight: bold;
-      font-size: 16px;
-      cursor: pointer;
-      text-align: center;
-      transition: background 0.3s ease;
-    }
+/* Textarea Resize Control */
+.input-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
 
-    .btn-send:hover {
-      background-color: #00b3a8;
-    }
+/* Input Focus Glow Effect */
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #00d9c0;
+    box-shadow: 0 0 8px rgba(0, 217, 192, 0.2);
+}
 
-    /* --- TOAST STYLING (Bottom Left) --- */
-    .toast {
-      position: fixed;
-      left: 20px;
-      bottom: -100px; /* Initially off-screen */
-      background-color: #121a29;
-      color: #00d2c6;
-      border: 1px solid #04a49c;
-      padding: 16px;
-      border-radius: 8px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-      font-size: 14px;
-      z-index: 1000;
-      opacity: 0;
-      pointer-events: none;
-    }
+/* Submit Button Styling */
+.submit-btn {
+    background-color: #00d9c0;
+    color: #0b111e;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 14px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+/* Submit Button Hover Effect */
+.submit-btn:hover {
+    background-color: #00bfa8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 217, 192, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Toast Notification Styling */
+.toast {
+    position: fixed;
+    bottom: -100px; /* Shuru me screen ke bahar rahega */
+    left: 20px;
+    background-color: #121a29;
+    color: #00d2c6;
+    border: 1px solid #04a49c;
+    padding: 14px 24px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 1000;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Jab form submit hoga tab ye class activate hogi */
+.toast.show {
+    bottom: 30px; /* Screen par andar aane ke liye */
+    opacity: 1;
+}   
 
     /* Button par click hote hi Animation chalega */
     #toast-trigger:checked ~ .toast {

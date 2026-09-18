@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chirag Devatwal | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -131,31 +132,35 @@
     </section>
 
 
-    <!-- 5. CONTACT SECTION -->
-    
-  <div class="contact-container">
-    <h2>Contact <span>Me</span></h2>
-    <p>Let's work together or talk about your project</p>
+   <!-- 5. CONTACT SECTION -->
+    <section id="Contact" class="section bg-darker">
+        <div class="contact-container">
+            <h1 class="title">Contact <span>Me</span></h1>
+            <p class="subtitle">Let's work together or talk about your project</p>
 
-    <!-- Hidden Checkbox Trigger -->
-    <input type="checkbox" id="toast-trigger">
+            <form class="contact-form" action="#" method="POST">
+                <div class="input-group">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
 
-    <div class="form-group">
-        <form style="max-width: 600px; margin: auto;">
-      <input type="text" placeholder="Your Name">
-      <input type="email" placeholder="Your Email">
-      <input type="text" placeholder="Subject">
-      <textarea placeholder="Your Message"></textarea>
-      
-      <!-- Label button ki tarah kaam karega -->
-      <label for="toast-trigger" class="btn-send">Send Message</label>
-      </form>
-    </div>
+                <div class="input-group">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
 
-    <!-- Toast Notification Container -->
-    <div class="toast">✔ Message sent successfully!</div>
-  </div>
+                <div class="input-group">
+                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                </div>
+
+                <div class="input-group">
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
         
+        <!-- Toast Notification Container -->
+        <div class="toast">✔ Message sent successfully!</div>
     </section>
 
     <!-- Footer -->
